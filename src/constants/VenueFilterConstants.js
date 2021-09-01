@@ -1,0 +1,1 @@
+export const MAX_PRICE_PER_PAX = 2000000

@@ -1,0 +1,43 @@
+.description-container {
+    width: 100%;
+    & > .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        & > .title {
+            font-weight: bold;
+            font-size: 1.875rem !important;
+            line-height: 2.25rem;
+            margin-bottom: 0rem;
+        }
+
+        & > .share-button {
+            border: 0.04rem solid #282250 !important;
+            border-radius: 0.3962rem;
+            padding: 0.5625rem 0.75rem 0.5625rem 0.5rem;
+            background-color: white;
+            color: #282250;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 0.75rem !important;
+            line-height: 0.875rem;
+
+            & > svg {
+                font-size: 1rem;
+                margin-right: 0.625rem;
+            }
+        }
+    }
+
+    & > .address {
+        font-weight: normal;
+        font-size: 1rem !important;
+        line-height: 1.1875rem;
+        margin-bottom: 4rem;
+        color: black;
+        font-style: normal;
+    }
+}

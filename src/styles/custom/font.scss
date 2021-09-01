@@ -1,0 +1,17 @@
+@import '../Include.scss';
+
+@for $i from 1 through 200 {
+    .font-size-#{$i} {
+        font-size: ($i * 0.1rem) !important;
+    }
+}
+
+@each $breakpoint in $breakpoints {
+    @include media-breakpoint-up(#{$breakpoint}) {
+        @for $i from 1 through 200 {
+            .font-size-#{$breakpoint}-#{$i} {
+                font-size: ($i * 0.1rem) !important;
+            }
+        }
+    }
+}

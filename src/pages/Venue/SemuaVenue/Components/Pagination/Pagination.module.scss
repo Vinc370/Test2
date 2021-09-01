@@ -1,0 +1,18 @@
+.disabled {
+    a {
+        color: var(--secondary) !important;
+        &:hover, &:focus {
+            color: var(--secondary) !important;
+            box-shadow: none;
+        }
+    }
+}
+
+.active {
+    a {
+        color: white !important;
+        &:hover, &:focus {
+            color: white !important;
+        }
+    }
+}

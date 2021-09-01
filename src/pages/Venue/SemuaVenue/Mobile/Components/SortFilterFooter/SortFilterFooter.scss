@@ -1,0 +1,14 @@
+@import '../../../../../../styles/Include.scss';
+
+.filter-icon {
+    font-size: 1.5rem;
+}
+
+@include media-breakpoint-up(sm) {
+    .footer-container {
+        font-size: 1.5rem;   
+    }
+    .filter-icon {
+        font-size: 2.5rem;
+    }
+}

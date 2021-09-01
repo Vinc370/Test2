@@ -1,0 +1,50 @@
+@import "src/styles/Include";
+
+.slider{
+
+  .image-container{
+    height: 40vh;
+    img{
+      border-radius: 1em;
+      object-fit: contain;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  //for the event theme description
+  .event-theme-description{
+    margin: 0 auto;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+      margin: 0;
+    }
+  }
+}
+@include media-breakpoint-down(xs) {
+  .slider{
+
+    .image-container{
+      height: 20vh;
+    }
+
+    //for the arrow of the slider
+    i{
+      font-size: 1em;
+    }
+
+    //setting the size of the spacing for components
+    .up-bottom-margin{
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
+    }
+    .left-right-padding{
+      padding-left: 0.2em;
+      padding-right: 0.2em;
+    }
+  }
+}

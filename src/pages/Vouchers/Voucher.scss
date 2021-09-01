@@ -1,0 +1,28 @@
+@import "src/styles/Include";
+
+.manage-voucher{
+  .container-voucher{
+    width: 90vw;
+    margin: auto;
+  }
+
+  //for input of the refferal code
+  input{
+    width: 30%;
+  }
+  button{
+    margin-left: 1em;
+  }
+}
+
+@include media-breakpoint-down(xs){
+  .manage-voucher{
+    //for input of the refferal code
+    input{
+      width: 75%;
+    }
+    button{
+      margin-left: 1em;
+    }
+  }
+}

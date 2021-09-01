@@ -1,0 +1,487 @@
+@import "src/styles/Include";
+
+.dashboard-page {
+    background-color: #F4F7FC;
+    width: 100%;
+    padding-bottom: 0.25rem;
+
+    & > .sidebar {
+        display: none;
+    }
+
+    & > .content {
+        width: 100%;
+
+        & > .update-history {
+            display: block;
+            background-color: white;
+            margin: 0rem 0.75rem 2rem;
+            border-radius: 0.625rem;
+            padding: 1.875rem 1.6875rem 1.75rem;
+
+            & > .title {
+                font-size: 1.5rem;
+                line-height: 1.8125rem;
+                margin-bottom: 1.25rem;
+                font-weight: bold;
+            }
+
+            & > .list {
+                max-height: 13.25rem;
+                overflow-y: scroll;
+                & > table {
+                    font-size: 1rem;
+                    line-height: 1.1875rem;
+
+                    & > tbody > tr > td {
+                        padding: 0.5625rem 0.75rem;
+                        color: black;
+
+                        &:first-child {
+                            padding-left: 0rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        & > .dashboard-header {
+            background-color: #282250;
+            color: white;
+            padding: 1.9375rem 1.8125rem;
+
+            & > .page-title {
+                display: flex;
+                align-items: center;
+                margin-left: -0.625rem;
+                margin-bottom: 3.0625rem;
+
+                & > .icon {
+                    font-size: 1.875rem;
+                }
+
+                & > .text {
+                    font-weight: bold;
+                    font-size: 1.125rem;
+                    line-height: 1.375rem;
+                    letter-spacing: -0.0208rem;
+                    margin-bottom: 0rem;
+                }
+            }
+
+            & > .search-bar {
+                display: none;
+            }
+
+            & > .welcome {
+                font-size: 1rem;
+                line-height: 2.375rem;
+                margin-bottom: 0.625rem;
+            }
+
+            & > .wedding-reminder {
+                font-size: 1.4375rem;
+                line-height: 1.875rem;
+                margin-bottom: 0rem;
+            }
+        }
+
+        & > .menu-container {
+            margin-top: 1.875rem;
+            margin-bottom: 1.75rem;
+            overflow: hidden;
+            width: 100%;
+
+            & > .menu-wrapper {
+                overflow: auto;
+                display: flex;
+                align-items: flex-start;
+                padding-left: 0.75rem;
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+                
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                & > .menu-item {
+                    margin-right: 1.25rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    & > .icon-container {
+                        background: #FFFFFF;
+                        box-shadow: 0rem 0.25rem 0.625rem rgba(0, 0, 0, 0.25);
+                        border-radius: 0.5735rem;
+                        width: 5.305rem;
+                        height: 5.305rem;
+                        position: relative;
+                        margin-bottom: 0.5625rem;
+
+                        & > .icon {
+                            font-size: 2.8675rem;
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+
+                            &.smaller {
+                                font-size: 2.0075rem;
+                            }
+                        }
+                    }
+
+                    & > .label {
+                        text-align: center;
+                        font-weight: 500;
+                        font-size: 0.9375rem;
+                        line-height: 1.25rem;
+                        letter-spacing: -0.0172rem;
+                        color: #7E7E7E;
+                        margin-bottom: 0rem;
+                    }
+                }
+            }
+        }
+
+        & > .top-cards {
+            padding: 0rem 0.6875rem 1.125rem;
+            width: 100%;
+
+            & > .reminder {
+                background-color: white;
+                border-radius: 0.3125rem;
+                color: black;
+                padding: 1.0625rem 1.25rem;
+                margin-bottom: 1.25rem;
+
+                & > .title {
+                    font-weight: bold;
+                    font-size: 0.9375rem;
+                    line-height: 1.125rem;
+                    margin-bottom: 1.125rem;
+                }
+
+                & > .list {
+                    & > .item {
+                        border-radius: 0.5986rem;
+                        padding: 0.9375rem 1.0625rem;
+                        margin-bottom: 0.6875rem;
+                        display: flex;
+                        align-items: flex-start;
+
+                        & > .date-time {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin-right: 1.5625rem;
+
+                            & > .date {
+                                font-weight: bold;
+                                font-size: 0.875rem;
+                                line-height: 1.0625rem;
+                                margin-bottom: 0.375rem;
+                            }
+
+                            & > .time {
+                                font-size: 0.625rem;
+                                line-height: 0.75rem;
+                                margin-bottom: 0rem;
+                                color: rgba(0, 0, 0, 0.65);
+                            }
+                        }
+
+                        & > .detail {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            margin-right: 1.5625rem;
+
+                            & > .title {
+                                font-weight: bold;
+                                font-size: 0.875rem;
+                                line-height: 1.0625rem;
+                                margin-bottom: 0.375rem;
+                            }
+
+                            & > .subtitle {
+                                font-size: 0.625rem;
+                                line-height: 0.75rem;
+                                margin-bottom: 0rem;
+                                color: rgba(0, 0, 0, 0.65);
+                            }
+                        }
+                    }
+
+                    & > .item:last-child {
+                        margin-bottom: 0rem;
+                    }
+
+                    & > .item:nth-child(odd) {
+                        background-color: #EDF6FE;
+                    }
+
+                    & > .item:nth-child(even) {
+                        background-color: #FEFBE8;
+                    }
+                }
+            }
+
+            & > .calendar {
+                background-color: white;
+                border-radius: 0.3125rem;
+                color: black;
+                padding: 1.6875rem 1.25rem;
+
+                & > .title {
+                    font-weight: bold;
+                    font-size: 0.9375rem;
+                    line-height: 1.125rem;
+                    margin-bottom: 1.125rem;
+                }
+
+                & > .react-calendar {
+                    border: none;
+                    color: #49516F;
+                    width: 100%;
+
+                    & button {
+                        color: #49516F;
+                    }
+
+                    & .react-calendar__tile--active, & .react-calendar__tile--now {
+                        background-color: white;
+                    }
+
+                    & .react-calendar__month-view__weekdays {
+                        display: none !important;
+                    }
+                    
+                    & .react-calendar__navigation__prev2-button, & .react-calendar__navigation__next2-button {
+                        display: none;
+                    }
+
+                    & .react-calendar__navigation__label {
+                        font-weight: bold;
+                        order: 1;
+                        text-align: left;
+                    }
+
+                    & .react-calendar__navigation__prev-button {
+                        order: 2;
+                        font-size: 1.5rem;
+                    }
+
+                    & .react-calendar__navigation__next-button {
+                        order: 3;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .dashboard-page {
+        display: flex;
+        align-items: flex-start;
+
+        .update-history {
+            margin: 0rem 1.5rem 2rem !important;
+        }
+
+        & > .sidebar {
+            display: flex;
+            width: 16.125rem;
+            flex-direction: column;
+            background-color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            text-align: center;
+
+            & #logo {
+                align-self: center;
+                margin-top: 3.0625rem;
+                margin-bottom: 4.75rem;
+            }
+
+            & > .title {
+                font-weight: bold;
+                font-size: 1.5rem;
+                line-height: 1.8125rem;
+                margin-bottom: 4.625rem;
+                text-align: center;
+            }
+
+            & > .sidebar-item {
+                display: flex;
+                align-items: center;
+                padding: 1.125rem 0.625rem 1.0625rem 1.75rem;
+                background-color: white;
+                transition: background-color 150ms linear;
+
+                & > .icon {
+                    font-size: 2rem;
+                    margin-right: 1rem;
+
+                    &.smaller {
+                        padding: 0.25rem;
+                    }
+                }
+
+                & > .label {
+                    font-size: 1.25rem;
+                    line-height: 1.5rem;
+                    margin-bottom: 0rem;
+                }
+
+                &.active {
+                    background-color: rgba(0, 0, 0, 0.05);
+
+                    & > .label {
+                        font-weight: bold;
+                    }
+                }
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.05);
+                }
+            }
+        }
+
+        & > .content {
+            margin-left: 16.125rem;
+
+            & > .dashboard-header {
+                & > .page-title {
+                    display: none;
+                }
+
+                & > .search-bar {
+                    display: flex;
+                    align-items: center;
+                    height: 3.1875rem;
+                    width: 100%;
+                    max-width: 40.75rem;
+                    background-color: white;
+                    border-radius: 3.125rem;
+                    border: 0.125rem solid rgba(0, 0, 0, 0.1);
+                    padding: 0rem 1.25rem;
+                    margin-bottom: 3.4375rem;
+
+                    & > .icon {
+                        font-size: 1.25rem;
+                        color: rgba(0, 0, 0, 0.54);
+                        margin-right: 1rem;
+                        flex-shrink: 0;
+                    }
+
+                    & > input {
+                        height: 100%;
+                        width: 100%;
+                        flex-shrink: 1;
+                        border: none;
+                    }
+                }
+
+                & > .welcome {
+                    font-size: 1.5rem;
+                    line-height: 1.8125rem;
+                    margin-bottom: 0.8125rem;
+                    padding-left: 1.875rem;
+                }
+
+                & > .wedding-reminder {
+                    font-size: 1.5rem;
+                    line-height: 1.8125rem;
+                    padding-left: 1.875rem;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            & > .menu-container {
+                display: none;
+            }
+
+            & > .top-cards {
+                padding: 2.4375rem 1.5rem 1rem;
+                display: flex;
+                align-items: flex-start;
+
+                & > .reminder {
+                    height: 27.25rem;
+                    width: 100%;
+                    flex-shrink: 1;
+                    margin-right: 0.75rem;
+                    padding: 1.875rem 1.25rem 2.5rem;
+                    margin-bottom: 0rem;
+                    border-radius: 0.625rem;
+                    overflow: hidden;
+
+                    & > .title {
+                        font-size: 1.5rem;
+                        line-height: 1.8125rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    & > .list {
+                        padding: 0rem 0.09rem;
+                        overflow: auto;
+                        height: calc(100% - 2.8125rem);
+
+                        & > .item {
+                            margin-bottom: 0.8125rem;
+                            padding: 1.5625rem;
+
+                            & > .date-time {
+                                margin-right: 2.3125rem;
+
+                                & > .date {
+                                    font-size: 1.25rem;
+                                    line-height: 1.5rem;
+                                    margin-bottom: 0.3125rem;
+                                }
+
+                                & > .time {
+                                    font-size: 0.875rem;
+                                    line-height: 1.0625rem;
+                                }
+                            }
+
+                            & > .detail {
+                                & > .title {
+                                    font-size: 1rem;
+                                    line-height: 1.1875rem;
+                                    margin-bottom: 0.5rem;
+                                }
+
+                                & > .subtitle {
+                                    font-size: 1rem;
+                                    line-height: 1.1875rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                & > .calendar {
+                    width: 22.4375rem;
+                    height: 27.25rem;
+                    flex-shrink: 0;
+                    margin-bottom: 0rem;
+                    border-radius: 0.625rem;
+                    padding: 1.875rem 1.5rem 0rem;
+
+                    & > .title {
+                        font-size: 1.5rem;
+                        line-height: 1.8125rem;
+                    }
+                }
+            }
+        }
+    }
+}

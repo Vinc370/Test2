@@ -1,0 +1,76 @@
+.all-venues {
+    gap: 1.8125rem;
+
+    & > a > .card {
+        box-shadow: 0rem 0rem 1.0625rem -0.0625rem rgba(0, 0, 0, 0.25);
+        filter: none;
+        border-radius: 0.625rem;
+
+        & > .venue-body {
+            padding: 1.5rem 2rem !important;
+
+            & > .venue-image {
+                border-radius: 0.5625rem !important;
+                overflow: hidden;
+                width: 10.3125rem !important;
+                height: 10.3125rem !important;
+            }
+
+            & > .venue-content {
+                padding: 0 !important;
+                margin-left: 3.75rem !important;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start !important;
+
+                & > .venue-card-info {
+                    width: auto !important;
+                    margin-bottom: 0.625rem;
+
+                    & > .venue-title {
+                        font-weight: bold;
+                        font-size: 1.5rem !important;
+                        line-height: 1.75rem;
+                        margin-bottom: 0.875rem !important;
+                    }
+
+                    & > .venue-location, & > .venue-pax {
+                        font-weight: normal;
+                        font-size: 1rem !important;
+                        line-height: 1.25rem;
+                        margin-bottom: 0.3125rem;
+                        color: black !important;
+                        font-style: normal;
+
+                        & > svg {
+                            font-size: 1.25rem;
+                            margin-right: 0.5rem;
+                        }
+                    }
+                }
+
+                & > .venue-price-container {
+                    display: flex;
+                    align-items: center;
+
+                    & > .venue-price-container__price {
+                        font-weight: bold;
+                        font-size: 1.25rem !important;
+                        line-height: 1.5rem;
+                        color: #CB9F76 !important;
+                    }
+
+                    & > .venue-price-container__pax {
+                        position: static !important;
+                        font-size: 1rem !important;
+
+                        & > em {
+                            color: #B1B1B1 !important;
+                            font-style: normal !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

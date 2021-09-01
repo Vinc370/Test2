@@ -1,0 +1,31 @@
+@import "src/styles/Include";
+
+.notifications{
+  .signature-color-background{
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+
+    min-height: 100vh;
+  }
+
+  .white-background{
+    padding: 1em;
+    background: white;
+    border-radius: 1em;
+  }
+
+  .image-container{
+    width: 80%;
+  }
+}
+
+@include media-breakpoint-down(md){
+  .notifications{
+    .white-background{
+      padding: 0.2em;
+    }
+    .image-container{
+      width: 100%;
+    }
+  }
+}

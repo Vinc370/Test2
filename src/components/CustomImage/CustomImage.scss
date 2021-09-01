@@ -1,0 +1,18 @@
+@import "src/styles/Include";
+
+.small-image-banner{
+  width: 23.2%;
+  border: none;
+  margin: 0.5em;
+  img{
+    border-radius: 0.4em;
+    width: 100%;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-down(sm) {
+  .small-image-banner{
+    width: 43%;
+  }
+}

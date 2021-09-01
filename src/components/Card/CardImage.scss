@@ -1,0 +1,58 @@
+@import "../../styles/Include.scss";
+
+.card-image {
+  height: 25vh;
+  width: 37.5vh;
+  max-width: 100%;
+  background-size: cover;
+  .bottom-text{
+    min-height: 30% !important;
+    z-index: 1;
+  }
+  .title {
+    font-size: large;
+    font-weight: normal;
+    text-align: center;
+  }
+  .text {
+    font-size: medium;
+    color: #9a9a9a;
+    text-align: center;
+  }
+  .overlay-background{
+    background: rgb(2,0,36);
+    background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(16,16,48,0.2668213457076566) 35%, rgba(255,255,255,0) 100%);
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .card-image {
+    width: 56vw;
+    .title {
+      font-size: small;
+    }
+    .text {
+      font-size: smaller;
+    }
+  }
+
+  .card-promo-info {
+    width: 56vw;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .card-image {
+    width: 100%;
+    .title {
+      font-size: small;
+    }
+    .text {
+      font-size: smaller;
+    }
+  }
+
+  .card-promo-info {
+    width: 100%;
+  }
+}

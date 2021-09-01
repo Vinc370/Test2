@@ -1,0 +1,904 @@
+@import "src/styles/Include";
+
+.keranjang{
+
+  .input-text{
+    font-style: italic;
+    font-size: 1.5rem !important;
+    line-height: 1.8125rem;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  .container-keranjang{
+    width: 90vw;
+    margin: auto;
+  }
+  //for the customization of the width
+  .width-25{
+    width: 25%;
+  }
+  .width-75{
+    width:75%;
+  }
+
+  .form-control:disabled{
+    background-color: transparent;
+  }
+
+  .keranjang-form{
+    .tambah-promo{
+      background-color: #ffc47b;
+      padding: 0.7em;
+      border-radius: 1em;
+      cursor: pointer;
+    }
+
+    &__location {
+      & .input-group {
+        border: 0.0625rem solid #C4C4C4;
+        border-radius: 0.3125rem;
+        display: flex;
+        align-items: center;
+
+        & .input-group-prepend {
+          & > .input-group-text {
+            padding: 0.5625rem 1.5rem 0.5625rem 0.9375rem;
+            border: none;
+            background-color: white;
+
+            & > svg {
+              font-size: 1.375rem;
+              color: #282250;
+            }
+          }
+        }
+
+        & input {
+          border: none;
+          font-weight: normal;
+          font-size: 0.8125rem !important;
+          line-height: 1rem;
+          padding: 0.6875rem 0.9375rem 0.6875rem 0rem;
+        }
+      }
+    }
+
+    &__detail {
+      padding-top: 0.25rem;
+
+      & > .section-title__primary {
+        font-size: 0.9375rem !important;
+        line-height: 1.125rem;
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    & .promo-code {
+      border: 0.0625rem solid #C4C4C4;
+      border-radius: 0.3125rem;
+      margin-bottom: 1.5rem;
+      padding: 0rem 0.9375rem;
+      height: 3.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      & > .type-icon {
+        font-size: 1.5rem !important;
+        margin-right: 0.5rem;
+
+        &.bank {
+          color: #CB9F76;
+        }
+
+        &.cc {
+          color: #282250;
+        }
+
+        & + .label {
+          font-weight: normal;
+          font-size: 0.8125rem !important;
+          line-height: 1rem;
+          margin-bottom: 0;
+          margin-right: auto;
+        }
+      }
+
+      &__input {
+        font-weight: normal;
+        font-size: 0.8125rem !important;
+        line-height: 1rem;
+        border: 0;
+        padding: 0;
+      }
+
+      &__choose-payment {
+        font-weight: normal;
+        font-size: 0.8125rem !important;
+        line-height: 1rem;
+        color: #A6A6A6;
+        margin-bottom: 0;
+      }
+
+      &__button {
+        padding: 0;
+        background-color: white;
+        border-radius: 0;
+        font-weight: bold;
+        font-size: 0.8125rem !important;
+        line-height: 1rem;
+        color: #282250;
+      }
+    }
+
+    & .used_promo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.75rem;
+      justify-content: space-between;
+
+      & > p {
+        font-weight: normal;
+        font-size: 0.8125rem !important;
+        line-height: 1rem;
+        margin-bottom: 0;
+      }
+    }
+
+    & .cart-total-amount {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9375rem 0rem;
+
+      &__label > p, &__amount > p {
+        font-weight: bold;
+        font-size: 1.125rem !important;
+        line-height: 1.375rem;
+        color: black;
+        margin-bottom: 0;
+      }
+    }
+
+    & .info {
+      margin-top: 0.5rem;
+      font-weight: normal;
+      font-size: 0.8125rem !important;
+      line-height: 1rem;
+      color: #8F8F8F;
+      margin-bottom: 1.125rem;
+      text-align: center;
+    }
+  }
+
+  //engga tau aja nih kenapa tb tb munculin border sendiri wkwk
+  button{
+    border: none !important;
+  }
+
+  //this is for tambah promo, w-25 and w-75 cannot be modified
+  .tambah-promo{
+    .w-5{
+      width: 5%;
+    }
+    .w-90{
+      width: 90%;
+    }
+  }
+
+  & .transactions-history {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 3.75rem;
+
+    & > .time-line {
+      position: absolute;
+      left: 1.3438rem;
+      top: 0.625rem;
+      bottom: 0.625rem;
+      width: 0.125rem;
+      background-color: rgba(194, 194, 194, 0.55);
+      z-index: 1;
+    }
+
+    &__list-container {
+      width: 100%;
+      position: relative;
+    }
+
+    &__date-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.6875rem;
+      position: relative;
+      z-index: 2;
+
+      & > .marker {
+        width: 1.25rem;
+        height: 1.25rem;
+        display: block;
+        border-radius: 0.625rem;
+        background-color: #282250;
+        border: 0.125rem solid white;
+        box-shadow: 0rem 0rem 0.25rem rgba(0, 0, 0, 0.25);
+        margin-right: 0.625rem;
+      }
+
+      & > .date {
+        font-weight: bold;
+        font-size: 1.125rem !important;
+        line-height: 1.375rem;
+        margin-bottom: 0;
+      }
+    }
+
+    &__card-container {
+      box-shadow: 0rem 0rem 0.5625rem rgba(0, 0, 0, 0.25);
+      border-radius: 0.3125rem;
+      padding: 0.375rem 1.25rem 1rem;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+      background-color: white;
+
+      & > .header-container {
+        display: flex;
+        align-items: center;
+        padding-bottom: 0.3125rem;
+        border-bottom: 0.0625rem solid rgba(194, 194, 194, 0.55);
+
+        & > .title {
+          font-weight: bold;
+          font-size: 0.8125rem !important;
+          line-height: 2.25rem;
+          margin-bottom: 0;
+          position: relative;
+          // padding-left: 0.75rem;
+
+          &::before {
+            content: '';
+            width: 0.25rem;
+            height: 100%;
+            position: absolute;
+            left: -0.75rem;
+            top: 0;
+            bottom: 0;
+            background-color: #CB9F76;
+            border-radius: 0.125rem;
+          }
+        }
+
+        & > .time {
+          font-weight: 500;
+          font-size: 0.8125rem !important;
+          line-height: 1rem;
+          color: #B5B1B1;
+          margin-bottom: 0;
+          margin-left: auto;
+        }
+      }
+
+      & > .content-container {
+        padding-top: 1.125rem;
+        display: flex;
+        align-items: flex-start;
+
+        & > .list {
+          width: 100%;
+          display: grid;
+          gap: 0.375rem;
+
+          & > .item {
+            padding-left: 0.6875rem;
+            position: relative;
+            font-weight: normal;
+            font-size: 0.625rem !important;
+            line-height: 0.75rem;
+            margin-bottom: 0;
+
+            & > .extra {
+              color: #9C9C9C;
+              font-size: 0.5rem !important;
+              line-height: 0.625rem;
+            }
+
+            &::before {
+              content: '';
+              width: 0.3125rem;
+              height: 0.3125rem;
+              background-color: #C4C4C4;
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              border-radius: 0.3125rem;
+            }
+          }
+        }
+
+        & > .see-detail {
+          padding: 0;
+          background-color: white;
+          color: #282250;
+          font-weight: bold;
+          font-size: 0.625rem !important;
+          line-height: 0.75rem;
+          margin-top: 0.375rem;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  .keranjang-information-container {
+    background-color: #EDFBF3;
+  }
+}
+
+
+@include media-breakpoint-down(md) {
+  .keranjang{
+    //for the design not to show 100% width that isnt the safe area of mobile phone
+    .keranjang-form, .transactions-history, .keranjang-berjalan{
+      padding-left: 0.8em;
+      padding-right: 0.8em;
+    }
+
+    //to smaller the taken area of margin for smaller design
+    .up-bottom-margin{
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
+    }
+
+    .container-keranjang{
+      //for the column to remove the padding and has 100% full width
+      .col-sm-8{
+        min-width: 100%;
+        padding: 0;
+      }
+      //for the mobile design to look perfectly fit 100%
+      width: 100%;
+    }
+
+    //hiding the display of the information box
+    .information-box{
+      display: none;
+    }
+
+    //for removing the margin in the options above
+    .mr-2{
+      margin-right: 0 !important;
+    }
+
+    //hiding the horizontal line of the menu
+    .horizontal-line{
+      display: none;
+      display: none;
+    }
+
+    .bantuan-center{
+      display: flex;
+      justify-content: center;
+    }
+
+    //width-25 and width-75 is created because of the w-25 cannot be modified in the responsive design
+    .keranjang-berjalan, .keranjang-form {
+      .width-25, .width-75 {
+        width: 50% !important;
+      }
+    }
+
+    //for the button informations in summary of the transactions
+    .button-informations {
+      .w-50 {
+        width: 80% !important;
+      }
+    }
+
+    //for the options above
+    .for-options{
+      width: 100%;
+      .for-button{
+        width: 50%;
+        padding: 0.5em;
+        margin-bottom: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.active-border > button {
+          font-weight: bold;
+          font-size: 1.125rem !important;
+          line-height: 1.375rem;
+          color: #282250;
+          border-color: #282250 !important;
+        }
+
+        & > button {
+          font-weight: bold;
+          font-size: 1.125rem !important;
+          line-height: 1.375rem;
+          color: #888793;
+          border-bottom: 0.25rem solid transparent !important;
+          border-radius: 0;
+          padding-bottom: 0.625rem;
+        }
+      }
+      //for the vertical line of the button
+      .vl{
+        border-left: 1px solid lightgrey;
+        height: 4.5vh;
+        position: absolute;
+        left: 50%;
+        top: 5px;
+      }
+      .white-button, .grey-button{
+        background-color: transparent;
+        padding: inherit;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .container-keranjang{
+    .vl{
+      height: 7vh !important;
+    }
+  }
+}
+
+input[type="date" i] {
+  display: flex;
+  align-items: center;
+  padding: 0.6875rem 0.9375rem;
+  min-height: 2.625rem;
+  font-weight: normal;
+  font-size: 0.8125rem !important;
+  line-height: 1rem;
+
+  &::-webkit-calendar-picker-indicator {
+    order: 1;
+    background-image: url(./input_date_indicator.svg);
+    margin-left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    margin-right: 1.5rem;
+    visibility: visible !important;
+  }
+
+  &::-webkit-datetime-edit {
+    order: 2;
+  }
+}
+
+.attachment-file {
+  box-shadow: 0rem 0.0625rem 0.25rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.3125rem;
+  padding: 1.125rem 1.25rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+
+  &__icon {
+    color: #000000;
+    font-size: 1rem !important;
+    margin-right: 0.625rem;
+  }
+
+  &__name {
+    font-weight: normal;
+    font-size: 0.8125rem !important;
+    line-height: 1rem;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+
+  &__arrow {
+    // transform: rotate(180deg);
+    font-size: 0.625rem !important;
+    color: #393939;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .keranjang {
+    padding-bottom: 5rem;
+
+    & > .container-keranjang > div > div:first-child {
+      & > .page-title {
+        font-size: 1.875rem !important;
+        line-height: 2.875rem !important;
+        padding: 0rem 0rem 0rem 1.375rem !important;
+        margin-bottom: 3.125rem;
+
+        &::before {
+          height: 2.875rem;
+          width: 0.375rem;
+        }
+      }
+      
+      & > .for-options{
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-bottom: 3.375rem;
+
+        & > .for-button{
+          width: auto;
+          padding: 0;
+          // margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0rem 3.5rem 0rem 0rem !important;
+  
+          &.active-border > button {
+            font-weight: bold;
+            font-size: 1.5rem !important;
+            line-height: 1.8125rem;
+            color: #282250;
+            border-color: #282250 !important;
+          }
+  
+          & > button {
+            font-weight: bold;
+            font-size: 1.5rem !important;
+            line-height: 1.8125rem;
+            color: #888793;
+            border-bottom: 0.3125rem solid transparent !important;
+            border-radius: 0;
+            padding: 0rem 0rem 0.75rem 0rem;
+            background-color: white;
+            margin-right: 3.5rem;
+          }
+        }
+
+        & > .for-button:last-child {
+          margin: 0 !important;
+        }
+      }
+
+      & > div > .keranjang-form {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7.1875rem;
+
+        & > .left {
+          padding-top: 0rem;
+
+          & > form {
+            & > .form-group {
+              margin-bottom: 2.75rem;
+              padding-left: 0.625rem;
+
+              & > .form-label {
+                font-weight: bold;
+                font-size: 1.5rem !important;
+                line-height: 2.0625rem !important;
+                position: relative;
+                padding: 0rem 0rem 0rem 0.75rem;
+                margin-bottom: 0.9375rem !important;
+                transform: translateX(-0.625rem);
+    
+                &::before {
+                  content: '';
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  width: 0.1875rem;
+                  height: 2.0625rem;
+                  background-color: #CB9F76;
+                  border-radius: 0.0625rem;
+                }
+              }
+
+              & > input {
+                font-weight: normal;
+                font-size: 1rem !important;
+                line-height: 1.1875rem;
+                height: 3rem;
+                padding: 0.9375rem;
+              }
+
+              & > .input-group {
+                height: 3rem;
+                margin-top: 0.5rem;
+
+                & > .input-group-prepend {
+                  & > .input-group-text {
+                    & > svg {
+                      font-size: 1.6875rem;
+                    }
+                  }
+                }
+
+                & > input {
+                  font-weight: normal;
+                  font-size: 1rem !important;
+                  line-height: 1.1875rem;
+                  height: 2.875rem;
+                }
+              }
+            }
+          }
+
+          & > .section-title__primary {
+            font-size: 1.5rem !important;
+            line-height: 2.0625rem !important;
+            padding: 0rem 0rem 0rem 0.75rem !important;
+            margin-bottom: 1.75rem;
+  
+            &::before {
+              width: 0.1875rem;
+              height: 2.0625rem;
+              border-radius: 0.0625rem;
+            }
+          }
+
+          & > .cart-item__container {
+            gap: 1.875rem;
+
+            & > .cart-item__content {
+              & > div:first-child {
+                & > .cart-item__name {
+                  font-weight: bold;
+                  font-size: 1rem !important;
+                  line-height: 1.1875rem;
+                }
+
+                & > div > a {
+                  font-weight: normal;
+                  font-size: 1rem !important;
+                  line-height: 1.1875rem;
+                  color: #9D9D9D;
+                }
+              }
+
+              & > .cart-item__price > p {
+                font-weight: bold;
+                font-size: 1rem !important;
+                line-height: 1.1875rem;
+              }
+            }
+          }
+        }
+
+        & > .right {
+          & > .desktop-card {
+            background: #F8F8F8;
+            box-shadow: 0rem 0rem 1.1875rem -0.3125rem rgba(0, 0, 0, 0.25);
+            padding: 2.375rem 2.4375rem 1.875rem;
+            margin-bottom: 2.0625rem;
+
+            & > .promo-code {
+              margin-bottom: 1.6875rem;
+
+              & > input {
+                background-color: transparent;
+                font-size: 1rem !important;
+                line-height: 1.1875rem;
+              }
+
+              & > .promo-code__button {
+                font-size: 1rem !important;
+                line-height: 1.1875rem;
+              }
+            }
+
+            & > .cart-total-amount {
+              padding: 0rem 0rem 1.4375rem 0rem;
+              margin-bottom: 1.375rem;
+              border-bottom: 0.0625rem solid #C4C4C4;
+
+              & > .cart-total-amount__label > p {
+                font-weight: normal;
+                font-size: 1rem !important;
+                line-height: 1.1875rem;
+              }
+
+              & > .cart-total-amount__amount > p {
+                font-weight: bold;
+                font-size: 1.5rem !important;
+                line-height: 1.8125rem;
+              }
+            }
+
+            & > .section-title__primary {
+              font-weight: normal !important;
+              font-size: 1rem !important;
+              line-height: 1.1875rem;
+              padding: 0rem !important;
+              margin-bottom: 0.875rem;
+
+              &::before {
+                content: none;
+              }
+            }
+
+            & > .choose-payment {
+              border: none;
+              padding: 0;
+              margin-bottom: 3.25rem;
+              height: auto;
+
+              & > .promo-code__choose-payment {
+                font-weight: normal;
+                font-size: 1.25rem !important;
+                line-height: 1.5rem;
+              }
+
+              & > svg {
+                display: none;
+              }
+
+              & > .label {
+                font-weight: bold;
+                font-size: 1.25rem !important;
+                line-height: 1.5rem;
+              }
+            }
+          }
+
+          & > .info {
+            font-weight: normal;
+            font-size: 1rem !important;
+            line-height: 1.1875rem;
+            color: black;
+          }
+        }
+      }
+
+      & > .transactions-history {
+        
+        & > .time-line {
+          top: 1.0938rem;
+          left: 1.0938rem;
+          bottom: 1.0938rem;
+        }
+    
+        & > .transactions-history__list-container {
+          & > .transactions-history__date-container {
+            margin-bottom: 1.125rem;
+      
+            & > .marker {
+              width: 2.1875rem;
+              height: 2.1875rem;
+              border-width: 0.25rem;
+              border-radius: 50%;
+              box-shadow: 0rem 0rem 0.2539rem 0.1016rem rgba(0, 0, 0, 0.25);
+              margin-right: 1.25rem;
+            }
+      
+            & > .date {
+              font-weight: bold;
+              font-size: 1.25rem !important;
+              line-height: 1.5rem;
+            }
+          }
+
+          & > .transactions-history__card-container {
+            box-shadow: 0rem 0rem 0.457rem rgba(0, 0, 0, 0.25);
+            padding: 0.8125rem 1.75rem 1.25rem;
+            max-width: 41.5625rem;
+
+            & > .header-container {
+              border-bottom: 0rem;
+              margin-bottom: 0.9375rem;
+
+              & > .title {
+                font-weight: bold;
+                font-size: 1.25rem !important;
+                line-height: 2.0625rem;
+                padding: 0rem !important;
+
+                &::before {
+                  height: 2.0625rem;
+                  width: 0.1875rem;
+                }
+              }
+      
+              & > .time {
+                font-weight: bold;
+                font-size: 1rem !important;
+                line-height: 1.1875rem;
+              }
+            }
+      
+            & > .content-container {
+              padding: 0rem;
+              & > .list {
+                gap: 0.5625rem;
+                
+                & > .item {
+                  font-weight: normal;
+                  font-size: 1rem !important;
+                  line-height: 1.1875rem;
+                  padding-left: 1.0625rem;
+
+                  & > .extra {
+                    font-size: 1rem !important;
+                    line-height: 1.1875rem;
+                  }
+      
+                  &::before {
+                    width: 0.5625rem;
+                    height: 0.5625rem;
+                    border-radius: 50%;
+                  }
+                }
+              }
+      
+              & > .see-detail {
+                font-weight: bold;
+                font-size: 1rem !important;
+                line-height: 1.1875rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  input[type="date" i] {
+    &::-webkit-calendar-picker-indicator {
+      width: 1.6875rem;
+      height: 1.6875rem;
+    }
+  
+    &::-webkit-datetime-edit {
+      order: 2;
+    }
+  }
+}
+
+.form-label {
+  font-weight: bold;
+  font-size: 0.8125rem !important;
+  line-height: 1rem;
+  margin-bottom: 0.875rem !important;
+}
+
+.form-label-light {
+  font-size: 0.8125rem !important;
+  line-height: 1rem;
+  margin-bottom: 0.875rem !important;
+}
+
+.cart-item {
+  &__container {
+    display: grid;
+    gap: 1.625rem;
+    margin-bottom: 1.125rem;
+  }
+
+  &__name {
+    font-weight: normal;
+    font-size: 0.8125rem !important;
+    line-height: 1rem;
+    margin-bottom: 0.625rem;
+    color: black;
+
+    & + div {
+      display: flex;
+
+      & > a {
+        color: #9D9D9D !important;
+        font-size: 0.75rem !important;
+        line-height: 0.875rem !important;
+      }
+    }
+  }
+
+  &__price {
+    & > p {
+      font-size: 0.8125rem !important;
+      line-height: 1rem;
+      color: black;
+    }
+  }
+}

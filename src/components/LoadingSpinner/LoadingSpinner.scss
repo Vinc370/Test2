@@ -1,0 +1,14 @@
+.loading-spinner {
+    position: fixed;
+    background-color: white;
+    z-index: 1600;
+    margin-top: 0 !important;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+    .loading-image {
+        width: 30%;
+    }
+}

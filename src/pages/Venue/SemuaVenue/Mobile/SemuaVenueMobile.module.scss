@@ -1,0 +1,9 @@
+.body {
+    min-height: 100vh;
+}
+.filterFooter {
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    z-index: 999;
+}

@@ -1,0 +1,35 @@
+.mudahkan-pencarian-card__container {
+    width: 100%;
+    color: black;
+    
+    & > .img-container {
+        border-radius: 0.625rem;
+        position: relative;
+        padding-top: 61%;
+        overflow: hidden;
+        margin-bottom: 1.875rem;
+
+        & > img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    & > .title {
+        font-weight: bold;
+        font-size: 1.5rem !important;
+        line-height: 1.8125rem;
+        margin-bottom: 0.6875rem;
+    }
+
+    & > .subtitle {
+        font-weight: normal;
+        font-size: 1.125rem !important;
+        line-height: 1.375rem;
+        margin-bottom: 0;
+    }
+}

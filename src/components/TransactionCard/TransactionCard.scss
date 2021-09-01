@@ -1,0 +1,22 @@
+.transaction-card{
+  padding-top: 1em;
+  padding-bottom: 1em;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  .status-info{
+    margin: auto;
+    position: absolute;
+    right: 1em;
+    p{
+      //color: red;
+      font-weight: bold;
+      text-align: right;
+    }
+  }
+  .ellipsis {
+    width: 60%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

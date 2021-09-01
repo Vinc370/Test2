@@ -1,0 +1,44 @@
+@import '../../../../../../../../styles/Include.scss';
+
+.location-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+
+    & .location-option {
+        background-color: white;
+        color: #282250;
+        border: 1px solid #282250 !important;
+        padding: 0.4375rem 0px !important;
+        font-size: 0.875rem !important;
+        line-height: 1.04375rem;
+        border-radius: 0.3125rem !important;
+        position: relative;
+        word-break: break-word;
+
+        &__active {
+            background-color: #282250;
+            color: white;
+            border-color: #CB9F76 !important;
+            border-width: 0.125rem !important;
+            padding: 0.375rem 0px !important;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 1.5rem;
+                height: 1.5rem;
+                background-image: url('./filter-selected.png');
+                background-size: contain;
+                pointer-events: none;
+                transform: translate(50%, -50%);
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .location-grid-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

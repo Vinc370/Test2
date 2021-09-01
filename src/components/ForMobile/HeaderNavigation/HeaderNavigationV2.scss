@@ -1,0 +1,52 @@
+@import "src/styles/Include";
+
+.new-header-navigation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 0.875rem 0.9375rem;
+
+    @include media-breakpoint-up(lg){
+        & {
+            display: none;
+        }
+    }
+
+    & .header-navigation {
+        display: flex;
+        align-items: center;
+
+        & .back-icon {
+            color: white;
+            margin-right: 0.75rem;
+
+            & .icon {
+                font-size: 1.5rem !important;
+                margin: 0 !important;
+            }
+
+            &.black {
+                color: black;
+            }
+        }
+
+        & > .title {
+            font-weight: bold;
+            font-size: 1.125rem !important;
+            line-height: 1.5rem;
+            letter-spacing: -0.0266rem;
+            margin: 0rem !important;
+            color: white;
+
+            &.black {
+                color: black;
+            }
+
+            &.center {
+                margin: auto !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@import "src/styles/Include";
+
+.popup-eo,  .popup-resto, .confirmation-venue,.batalkan-pesanan{
+  padding: 0em 2em 2em 2em;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  overflow-x: scroll;
+
+  .button-popup{
+    // font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    padding: 0.5em;
+    align-items: center;
+  }
+  .for-close{
+    cursor: pointer;
+    color: gray;
+    padding-bottom: 0.3em;
+    font-size: 2em;
+    text-align: right;
+  }
+  .centering-text{
+    p, h4, h5{
+      text-align: center;
+      font-family: "Times New Roman";
+    }
+    p{
+      font-size: 1.2em;
+    }
+  }
+  .grey-box{
+    padding: 1em;
+    background-color: #e8e7e6;
+    .for-menu{
+      .right{
+        width: 60%;
+      }
+      .left {
+        width: 40%
+      }
+      .align-right{
+        p{
+          text-align: right;
+        }
+        .border-bottom-black{
+          border-bottom: 1px solid black;
+        }
+      }
+    }
+  }
+}
+
+.popup-eo, .popup-resto{
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+.confirmation-venue{
+  button{
+    width: 35%;
+    margin: 1em;
+  }
+}
+.popup-resto{
+  img{
+    object-fit: contain;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  //this breakpoints is for all the popups not only eo and venues
+  .popup-content{
+    width: 95% !important;
+  }
+  .popup-eo{
+    padding: 0em 0.5em 1em 0.5em;
+  }
+
+  .popup-eo,  .popup-resto{
+    height: 50vh;
+    overflow-y: scroll;
+    h4{
+      font-size: 1.3em !important;
+    }
+  }
+}
+

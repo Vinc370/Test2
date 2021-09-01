@@ -1,0 +1,75 @@
+@import "src/styles/Include";
+
+.konfirmasi-pembayaran{
+  .total-bayar{
+    background-color: #ebebeb;
+    padding: 2em;
+    p{
+      text-align: center;
+    }
+  }
+
+  .metode-bayar{
+    .metode{
+      cursor: pointer;
+      width: 25%;
+      background-color: #ebebeb;
+      padding: 1em;
+      margin-left: 1em;
+      margin-right: 1em;
+      border-radius: 0.4em;
+      p{
+        font-weight: bolder;
+        text-align: center;
+        margin: 0;
+      }
+      svg{
+        margin-left: 1em;
+        margin-top: 0.25em;
+      }
+    }
+  }
+
+  .petunjuk-bayar{
+    width: 100%;
+    .card{
+      border-radius: 0 !important;
+      .card-header{
+        button{
+          // font-family: 'Poppins', sans-serif;
+          color: #2e2e2e;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .konfirmasi-pembayaran{
+    .image-account{
+      display: none;
+    }
+
+    .for-border, .for-line{
+      display: none;
+    }
+
+    //untuk membuat responsive dari metodenya
+    .metode{
+      p{
+        text-align: left ;
+      }
+      svg{
+        position: absolute;
+        right: 1em;
+      }
+      .small-image-banner{
+        display: none;
+      }
+      width: 100% !important;
+      margin: 0 !important;
+      margin-bottom: 1em !important;
+      border-radius: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.left-part-container {
+    & > .fasilitas-container {
+        margin-bottom: 4.0625rem;
+
+        & > .section-title__primary {
+            font-weight: bold;
+            font-size: 1.5rem !important;
+            line-height: 2.0625rem !important;
+            padding: 0rem !important;
+            padding-left: 0.8125rem !important;
+            margin-bottom: 1.625rem;
+
+            &::before {
+                width: 0.1875rem;
+                height: 2.0625rem;
+            }
+        }
+
+        & > .fasilitas-list.desktop {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            padding: 0rem 0.75rem;
+
+            & > div {
+                & > .icon-container {
+                    width: 2.125rem;
+                    height: 2.125rem;
+                    border-radius: 0.1875rem;
+                    margin-right: 0.75rem;
+
+                    & > svg {
+                        width: 1.25rem;
+                        height: 1.25rem;
+                    }
+                }
+
+                & > .facility-name {
+                    font-weight: normal;
+                    font-size: 1rem !important;
+                    line-height: 1.1875rem;
+                    margin-top: 0.375rem !important;
+                }
+            }
+        }
+    }
+
+    & > .informasi-tambahan-container.desktop {
+        & > .informasi-tambahan-title {
+            font-weight: bold;
+            font-size: 1.5rem !important;
+            line-height: 2.0625rem !important;
+            padding: 0rem !important;
+            padding-left: 0.8125rem !important;
+            margin-bottom: 2.1875rem;
+
+            &::before {
+                width: 0.1875rem;
+                height: 2.0625rem;
+            }
+        }
+
+        & > .informasi-tambahan-detail__container {
+            padding: 0rem 0.75rem;
+
+            & > .informasi-tambahan-detail__item {
+                padding-bottom: 0.625rem;
+                border-bottom: none;
+
+                & > .informasi-tambahan-detail-label {
+                    font-weight: bold;
+                    font-size: 1rem !important;
+                    line-height: 1.1875rem;
+                }
+
+                & > .informasi-tambahan-detail-content {
+                    font-weight: normal;
+                    font-size: 1rem;
+                    line-height: 1.1875rem;
+                }
+            }
+        }
+    }
+}

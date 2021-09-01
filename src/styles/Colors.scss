@@ -1,0 +1,16 @@
+// define custom color yang bakalan dipake berkali kali, jangan pake css manual
+// consider ngubah naming signature jadi primary (bawaan bootstrap)
+// consider ngubah naming grey jadi light (bawaan bootstrap)
+
+$theme-colors: (
+    "signature": #282250,
+    "grey": #828282,
+    "orange": #EA6813,
+    "gold": #D2B15B,
+    "lightgrey": #F2F2F2,
+    "lightpurple": #7247AB,
+    "primaryAccent": #7247AB,
+    "green": #23A454,
+    "primary": #282250,
+    "disablePrimary": #6d64a7,
+);

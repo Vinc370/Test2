@@ -1,0 +1,75 @@
+.menunggu-pembayaran{
+  padding: 2.1875rem 0rem 2.1875rem 0rem;
+  margin: 0rem 2.1875rem 0rem 2.1875rem;
+  border-bottom: 2px solid #232326;
+  .container-menunggu-pembayaran {
+    display: table;
+    width: 100%;
+    >div {
+      display: table-cell;
+    }
+    .bottom-right {
+      width: fit-content;
+    }
+  }
+  p {
+    letter-spacing: 0.5px;
+  }
+  .col-6{
+    padding: 0;
+  }
+  .title{
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+  .price{
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 26px;
+  }
+  .subtitle{
+    font-weight: bold;
+  }
+  .information-text{
+    font-size: x-small;
+    line-height: 1em;
+    color: #7C7C7C;
+  }
+  .status{
+    font-weight: bold;
+    line-height: 1.5em;
+    color: #27AE60;
+    text-align: right;
+  }
+  .link-status{
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 1em;
+    color: #fff;
+    background-color: #232326;
+    padding: 0.5em;
+    text-align: right;
+  }
+  .button{
+    background: #232326;
+    border-radius: 6.30252px;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 1em;
+    color: #FFFFFF;
+    padding: 1em;
+  }
+  .menunggu-pembayaran-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    p {
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.menunggu-pembayaran:nth-last-child(1) {
+  border-bottom: none;
+}

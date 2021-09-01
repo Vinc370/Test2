@@ -1,0 +1,23 @@
+@import "src/styles/Include";
+.header-navigation{
+
+  .vertical-center {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  svg{
+    font-size: 1.2em;
+    margin: 1em 0.5em 1em 1em;
+    cursor: pointer;
+  }
+}
+
+@include media-breakpoint-up(lg){
+  .container-header-navigation{
+    display: none;
+  }
+}

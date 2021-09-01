@@ -1,0 +1,62 @@
+@import '../../../styles/Include.scss';
+
+.all-vendor {
+    padding: 5em;
+    & .vendor-acara {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        column-gap: 1.0625rem;
+        row-gap: 1.25rem;
+        padding-bottom: 5.375rem;
+        .small-image-banner {
+            position: relative;
+            margin: 0;
+            padding-top: 100%;
+            width: 100%;
+            filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.1));
+            border-radius: 0.625rem;
+            overflow: hidden;
+            a {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.59) 14.99%, rgba(0, 0, 0, 0) 43.66%);
+                }
+                p {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    padding: 1rem 0.875rem;
+                    font-weight: 800;
+                    line-height: 0.875rem;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .all-vendor {
+        padding: 1em;
+        & .vendor-acara {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+}

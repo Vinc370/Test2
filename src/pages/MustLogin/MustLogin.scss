@@ -1,0 +1,13 @@
+.must-login-container {
+    .must-login-bottom {
+        width: 50%;
+    }
+}
+
+@media (max-width: 787px) {
+    .must-login-container {
+        .must-login-bottom {
+            width: 100%;
+        }
+    }
+}

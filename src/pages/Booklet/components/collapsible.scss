@@ -1,0 +1,5 @@
+.collapsible {
+    transition: height 150ms linear;
+    height: var(--height);
+    overflow: hidden;
+}

@@ -1,0 +1,58 @@
+@import "src/styles/Include";
+
+.all-eo{
+  .eo-header {
+    //this is to hide the header of mobile component
+    display: none ;
+  }
+  .container-alleo{
+    width: 85vw;
+    margin: auto;
+  }
+  .d-mobile {
+    display: none;
+  }
+  .d-desktop {
+    display: block;
+  }
+}
+
+@include media-breakpoint-down(md){
+  .all-eo{
+    //this is for the header of mobile component
+    .eo-header{
+      display: block;
+      //this would be the top component
+      .first-comp{
+        background-color: darkslateblue;
+        height: 10vh;
+      }
+      //this would be the bottom component
+      .second-comp{
+        margin-top: -3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div{
+          width: 85%;
+          padding: 1em;
+          border-radius: 1em;
+          p{
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs){
+  .all-eo {
+    .d-mobile {
+      display: block;
+    }
+    .d-desktop {
+      display: none;
+    }
+  }
+}

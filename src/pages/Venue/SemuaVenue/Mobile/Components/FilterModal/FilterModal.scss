@@ -1,0 +1,68 @@
+.filter-modal {
+    border-radius: 0.9375rem;
+}
+.filter-title {
+    font-size: 0.75rem;
+}
+.modal-body {
+    font-size: 0.75rem;
+}
+
+.filter-modal-dialog {
+    margin: 0;
+    height: 100vh !important;
+
+    & .filter-modal {
+        height: calc(100vh - 4.375rem);
+        position: fixed;
+        bottom: 0;
+        border-radius: 1.875rem 1.875rem 0px 0px;
+
+        & .modal-header {
+            border: none;
+            padding-top: 1.25rem;
+            padding-bottom: 0.75rem;
+        }
+
+        & .modal-body {
+            padding: 0px 0.9375rem !important;
+            overflow: auto;
+
+            & .selection-label {
+                color: #000000;
+                font-weight: bold;
+                font-size: 0.875rem;
+                line-height: 1.0625rem;
+                margin: 0;
+                margin-bottom: 0.75rem;
+            }
+        }
+
+        & .modal-footer {
+            border: none !important;
+
+            & .filter-modal__filter-buttons {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 2.6875rem;
+
+                & button {
+                    padding: 0.9375rem;
+                    border: 1px solid #282250 !important;
+                    border-radius: 0.625rem;
+                    background-color: white;
+                    color: #282250;
+                    font-weight: 500;
+                    font-size: 1.125rem !important;
+                    line-height: 1.375rem !important;
+
+                    &.apply-button {
+                        background-color: #282250;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

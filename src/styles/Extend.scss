@@ -1,0 +1,16 @@
+// extend bootstrap theme here
+
+
+
+
+// on focus border color with transition using colors from $theme-colors
+// ex:
+// .border-focus-primary
+// .border-focus-secondary
+@each $color, $value in $theme-colors {
+    .border-focus-#{$color} {
+        &:focus {
+            border-color: $value !important;
+        }
+    }
+}

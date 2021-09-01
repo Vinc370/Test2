@@ -1,0 +1,14 @@
+.checkbox-filter-container {
+    cursor: pointer;
+
+    & > h5 {
+        font-weight: bold;
+        font-size: 0.9375rem !important;
+        line-height: 1.125rem;
+        margin-bottom: 0.5rem !important;
+    }
+
+    & > .d-grid {
+        gap: 0.5rem;
+    }
+}

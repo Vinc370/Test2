@@ -1,0 +1,35 @@
+@import '../Include.scss';
+
+.d-grid {
+    display: grid;
+}
+
+@for $i from 1 through 10 {
+    .grid-gap-#{$i} {
+        gap: ($i * 0.5rem);
+    }
+}
+
+@for $i from 1 through 10 {
+    .grid-template-col-#{$i} {
+        grid-template-columns: repeat(#{$i}, 1fr);
+    }
+}
+
+@each $breakpoint in $breakpoints {
+    @include media-breakpoint-up(#{$breakpoint}) {
+        @for $i from 1 through 10 {
+            @for $i from 1 through 10 {
+                .grid-gap-#{$breakpoint}-#{$i} {
+                    gap: ($i * 0.5rem);
+                }
+            }
+            
+            @for $i from 1 through 10 {
+                .grid-template-col-#{$breakpoint}-#{$i} {
+                    grid-template-columns: repeat(#{$i}, 1fr);
+                }
+            }
+        }
+    }
+}

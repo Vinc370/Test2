@@ -1,0 +1,7 @@
+@import "src/styles/Include";
+
+.greyHeader { 
+    @include media-breakpoint-up(lg) {
+        background-color: var(--lightgrey);
+    }
+}

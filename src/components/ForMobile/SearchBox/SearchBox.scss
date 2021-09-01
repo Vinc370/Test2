@@ -1,0 +1,36 @@
+@import "src/styles/Include";
+
+.search{
+
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  .container-search{
+    position: relative;
+    //padding: 1em;
+  }
+  .search-box{
+    //border-radius: 1em;
+    padding: 1em 0.5em 1em 0.5em;
+    background-color: #ffffff;
+    input{
+      margin-left: 0.5em;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      width: 85%;
+    }
+    input:focus{
+      outline: none;
+    }
+    .padd-left{
+      padding-left: 0.5em;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  //.search{
+  //  display: none;
+  //}
+}

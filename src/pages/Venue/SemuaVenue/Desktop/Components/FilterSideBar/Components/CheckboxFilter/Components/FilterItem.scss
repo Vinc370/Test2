@@ -1,0 +1,44 @@
+.filter-item {
+    display: flex;
+    align-items: center;
+
+    & > .box {
+        border: 0.0313rem solid #CB9F76;
+        width: 0.6875rem;
+        height: 0.6875rem;
+        position: relative;
+        margin-right: 0.375rem;
+        border-radius: 0.125rem;
+
+        & > .icon {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 0.5rem;
+        }
+
+        &.checked {
+            background: #282250;
+
+            & > .icon {
+                display: block;
+            }
+        }
+    }
+
+    & > .label {
+        font-weight: normal;
+        font-size: 0.75rem !important;
+        line-height: 0.875rem;
+        color: #282250;
+    }
+
+    & > input {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+}

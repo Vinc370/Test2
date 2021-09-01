@@ -1,0 +1,44 @@
+.semua-venue-mobile {
+    &__section-title {
+        padding-left: 0.75rem;
+        margin-bottom: 1.5625rem;
+        position: relative;
+        font-size: 0.9375rem;
+        line-height: 1.125rem;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 0.3125rem;
+            background-color: #CB9F76;
+            border-radius: 0.125rem;
+        }
+
+        & h5 {
+            margin-bottom: 0px;
+            padding: 0.71875rem 0;
+        }
+    }
+
+    &__filter-icon {
+        font-size: 1.125rem !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        margin-left: auto;
+        
+        .icon {
+            margin-left: 0.3125rem !important;
+            font-size: 1.125rem !important;
+        }
+    }
+
+    &__list-container {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 1.5625rem;
+    }
+}

@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index.html$ – [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule . /index.html [L]
+RewriteCond %{HTTP_HOST} ^user\.littlecloudeo\.com$
+RewriteRule ^/?$ "https\:\/\/user\.littlecloudeo\.com\/" [R=301,L]

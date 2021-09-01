@@ -1,0 +1,23 @@
+a {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.hover-gray:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+.app-name {
+    color: rgb(69, 0, 90) !important;
+}
+
+.list-style-none {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.no-border-color {
+    border-color: transparent !important;
+}

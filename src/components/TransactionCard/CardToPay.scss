@@ -1,0 +1,28 @@
+.custom-card-to-pay {
+    .form-label, .form-label-light {
+        margin-bottom: 0 !important;
+        height: fit-content;
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card-body {
+        margin-left: 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .card-body-left {
+            display: flex;
+            flex-direction: column;
+
+            .payment-label {
+                font-weight: bold;
+                font-size: large;
+            }
+        }
+    }
+}

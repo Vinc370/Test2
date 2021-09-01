@@ -1,0 +1,17 @@
+@import '../Include.scss';
+
+@for $i from 0 through 5 {
+    .border-#{$i} {
+        border-width: ($i * 1px) !important;
+    }
+}
+
+@each $breakpoint in $breakpoints {
+    @include media-breakpoint-up(#{$breakpoint}) {
+        @for $i from 0 through 5 {
+            .border-#{$breakpoint}-#{$i} {
+                border-width: ($i * 1px) !important;
+            }
+        }
+    }
+}

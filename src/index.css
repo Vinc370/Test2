@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    font-family: 'Lato' !important;
+}
+
+html {
+    font-family: 'Lato';
+    scroll-behavior: smooth;
+}
+
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free" !important;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+p, a, h5, h1, h2, h3, h4, h6, label, ::placeholder, input{
+    /* font-family: 'Lato', sans-serif; */
+    font-family: 'Lato';
+}
+
+label {
+    margin: 0 !important;
+}
+
+button{
+    border: none !important;
+    outline: none !important;
+}
+
+.signature-color-background{
+    background-color: #282250;
+}
+
+.font-signature-color{
+    color: #282250;
+}
+
+.bigger-text{
+    font-size: larger;
+}
+
+.light-grey-background{
+    background-color: #ebebeb;
+}
+
+.black-background{
+    background-color: #2e2e2e;
+}
+
+.font-white{
+    color: white;
+}
+
+.align-horizontally{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.align-vertically{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.up-bottom-padding{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.up-bottom-margin{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.align-center{
+    align-items: center;
+    justify-content: center;
+}
+
+.super-rounded-border{
+    border-radius: 10em;
+}
+
+.signature-button{
+    color: white;
+    background-color: #282250;
+    font-family: 'Lato', sans-serif;
+    border-radius: 5px;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.green-button{
+    color: white;
+    background-color: #32a852;
+    font-family: 'Lato', sans-serif;
+    border-radius: 5px;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.alt-button{
+    color: white !important;
+    background-color: #ee8c2d !important;
+    font-family: 'Lato', sans-serif !important;
+    border-radius: 5px !important;
+    padding: 0.5em 1em 0.5em 1em !important;
+}
+
+.grey-button{
+    color: #2e2e2e;
+    background-color: #ebebeb;
+    font-family: 'Lato', sans-serif;
+    border-radius: 5px;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.white-button{
+    color: #2e2e2e;
+    background-color: #ffffff;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    border-radius: 0.4em;
+    padding: 0.5em 2em 0.5em 2em;
+}
+
+.bold-text{
+    font-weight: bolder;
+}
+
+.small-italic-grey-text{
+    font-size: 0.7em;
+    color: #9a9a9a;
+    font-style: italic;
+}
+
+.small-grey-text{
+    font-size: 0.7em;
+    color: #9a9a9a;
+}
+
+.left-right-padding{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.vertical-center-loading {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-center-loading .loading-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-light-gray {
+    background-color: #F6F6F6;
+}
+
+.h-30 {
+    height: 30% !important;
+}
+
+.rounded-2{
+    border-radius: 1rem !important;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.rounded-2-bottom {
+    border-bottom-right-radius: 1rem !important;
+    border-bottom-left-radius: 1rem !important;
+}
+
+/* bisa dibikin pake breakpoint bootstrap, gaperlu manual media query */
+/* nilainya langsung tembak aja pake rem jangan pake persen2 soalnya malah justru jadi bad practice n susah dipredict*/
+@media (max-width: 900px){
+    a, p, span, label, ::placeholder, button{
+        /* font-size: calc(100% - 0.1rem) !important; */
+    }
+
+    .small, .small-italic-grey-text{
+        font-size: 0.75em !important;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        /*font-size: calc(100% - 0.1em) !important;*/
+        font-size: 1em !important;
+    }
+}
+
+
+.general-container {
+    width: 90vw !important;
+    margin: auto !important;
+}
+
+@media (min-width: 1020px) {
+    .general-container {
+        width: 100% !important;
+        max-width: 1020px !important;
+    }
+
+    .general-desktop-container {
+        width: 100% !important;
+        max-width: 1020px !important;
+        margin: auto !important;
+    }
+}
+
+.sticky {
+    top: 0;
+    position: sticky !important;
+}
+
+.fixed {
+    top: 0;
+    position: fixed !important;
+}
+
+.text-decoration-line-through {
+    text-decoration: line-through;
+}
+
+.min-height-95{
+    min-height: 95vh;
+}

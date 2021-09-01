@@ -1,0 +1,37 @@
+.filter-sidebar {
+    box-shadow: 0rem 0.25rem 1.0625rem -0.0625rem rgba(0, 0, 0, 0.25);
+    border-radius: 0.625rem;
+    padding: 1.625rem 1.625rem 2rem 2.5rem;
+
+    & > h3 {
+        font-weight: bold;
+        font-size: 1.25rem !important;
+        line-height: 1.5rem;
+        margin-bottom: 2rem !important;
+    }
+
+    & > .d-grid {
+        gap: 1.625rem;
+
+        & > .harga-per-pax {
+            margin-bottom: 0rem !important;
+
+            & > .harga-per-pax__label {
+                font-weight: bold;
+                font-size: 0.9375rem !important;
+                line-height: 1.125rem;
+                margin-bottom: 0.5rem;
+            }
+
+            & > .harga-per-pax__container > .harga-per-pax__price-range {
+                padding-bottom: 0.4375rem !important;
+                
+                & > p {
+                    font-weight: normal;
+                    font-size: 0.6875rem !important;
+                    line-height: 0.875rem;
+                }
+            }
+        }
+    }
+}

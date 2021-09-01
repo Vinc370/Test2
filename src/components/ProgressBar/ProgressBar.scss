@@ -1,0 +1,48 @@
+.progress-bar-container {
+    position: relative;
+    .line-progress-bar {
+        height: 0.5rem;
+        background-color: #B9B9B9;
+        position: absolute;
+        width: 100%;
+        top: 0.75rem;
+    }
+
+    .bullet-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .bullet-and-text {
+            position: relative;
+
+            .bullet-progress {
+                background-color: #B9B9B9;
+                width: 2rem;
+                height: 2rem;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+            }
+
+            .bullet-progress.active {
+                background-color: var(--primary);
+            }
+    
+            .flying-text {
+                font-size: smaller;
+                position: absolute;
+                width: fit-content;
+                white-space: nowrap;
+                font-weight: bolder;
+                padding-top: 0.2rem;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+        
+    }
+
+}

@@ -1,0 +1,51 @@
+@import '../../../styles/Include.scss';
+
+//for rounded pop up to all pop ups not only vendor
+.popup-content{
+  border-radius: 1em !important;
+}
+
+.normal-vendor-popup, .theme-vendor-popup, .quantity-vendor-popup{
+  padding: 0em 2em 2em 2em;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+
+  title-inside-image{
+    margin-top: -3em;
+    font-size: 2em;
+    background-color: pink;
+  }
+
+  //for pop up button with green color
+  .button-popup{
+    // font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    padding: 0.5em;
+    align-items: center;
+  }
+
+  //for the closing icon in the popup
+  .for-close{
+    cursor: pointer;
+    color: gray;
+    padding-bottom: 0.3em;
+    font-size: 2em;
+    text-align: right;
+  }
+}
+
+.theme-vendor-popup, .normal-vendor-popup, .quantity-vendor-popup{
+  height: 70vh;
+  overflow-y: scroll;
+}
+@include media-breakpoint-down(md) {
+  .theme-vendor-popup, .quantity-vendor-popup{
+    padding: 0em 0.5em 1em 0.5em;
+  }
+  .normal-vendor-popup, .theme-vendor-popup, .quantity-vendor-popup{
+    height: 50vh;
+    overflow-y: scroll;
+  }
+}
